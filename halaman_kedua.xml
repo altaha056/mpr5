@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center|start"
+        android:layout_gravity="start">
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:scaleType="centerCrop"
+            android:layout_margin="40px"
+            android:src="@drawable/marcelo"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\@brazilian"
+                android:textColor="#BABABA"
+                android:textSize="10pt" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marcelo"
+                android:textColor="#2196F3"
+                android:textSize="12pt"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Football player \nReal madrid\nlove family"
+                android:textColor="#B5B5B5"
+                android:textSize="6pt"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marcelo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ini tulisan dengan\nrelative layout"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12pt"
+            android:translationY="50pt" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marcelo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ini tulisan dengan\nrelative layout"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12pt"
+            android:translationY="50pt" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marcelo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ini tulisan dengan\nrelative layout"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12pt"
+            android:translationY="50pt" />
+
+    </RelativeLayout>
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>
