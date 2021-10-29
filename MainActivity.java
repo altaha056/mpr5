@@ -5,27 +5,49 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    EditText inputTinggi,inputAlas;
+    Button hitungLuas;
+    TextView tampilHasil;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.halaman_pertama);
+        setContentView(R.layout.layouthitung);
 
-//        variabel primitif
-//        variabel reference
+        inputTinggi=(EditText) findViewById(R.id.inputTinggi);
+        inputAlas=(EditText) findViewById(R.id.inputAlas);
+        hitungLuas=(Button) findViewById(R.id.tombolhitung);
+        tampilHasil=(TextView) findViewById(R.id.tampilhasil);
 
-        ImageView kotakgambar = findViewById(R.id.komponengambar);
-
-        String urlgambar = "https://upload.wikimedia.org/wikipedia/commons/2/24/Oceanic_Whitetip_Shark.png";
-
-        Picasso.with(this).load(urlgambar).into(kotakgambar);
-
+        hitungLuas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                hitungLuasSegitiga();
+            }
+        });
 
     }
+
+    public void hitungLuasSegitiga(){
+        try{
+            Double alas=Double.parseDouble(inputAlas.getText().toString());
+            Double tinggi=Double.parseDouble(inputTinggi.getText().toString());
+            Double luas=0.5*alas*tinggi;
+            tampilHasil.setText(luas.toString());
+        }
+        catch(NumberFormatException e){
+            tampilHasil.setText("Masukkan angka");
+        }
+    }
+
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10pt">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40pt"
+        android:hint="Tinggi"
+        android:id="@+id/inputTinggi"
+        android:inputType="number"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40pt"
+        android:hint="Alas"
+        android:id="@+id/inputAlas"
+        android:inputType="number"/>
+    <Button
+        android:id="@+id/tombolhitung"
+        android:layout_width="match_parent"
+        android:layout_height="40pt"
+        android:text="Hitung luas"
+        android:backgroundTint="#009688"/>
+    <TextView
+        android:id="@+id/tampilhasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="di sini tampil hasil"
+        android:textSize="15pt"/>
+
+</LinearLayout>
