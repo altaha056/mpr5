@@ -17,12 +17,21 @@ public class MainActivity extends AppCompatActivity {
 
     EditText inputTinggi,inputAlas;
     Button hitungLuas;
-    TextView tampilHasil;
+    TextView tampilHasil,tombolDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layouthitung);
+
+        tombolDialog=(TextView)findViewById(R.id.tombolDialog);
+
+        tombolDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialog();
+            }
+        });
 
         inputTinggi=(EditText) findViewById(R.id.inputTinggi);
         inputAlas=(EditText) findViewById(R.id.inputAlas);
@@ -36,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void openDialog(){
+        ContohDialog a = new ContohDialog();
+        a.show(getSupportFragmentManager(),"contoh dialog");
     }
 
     public void hitungLuasSegitiga(){
